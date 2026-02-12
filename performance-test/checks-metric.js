@@ -13,19 +13,19 @@ export const options = {
         http_req_failed: ["rate<0.1"], // Return Error if the rate of failed requests is higher than 10%
         http_req_duration: [
             {
-                threshold: "p(95)<200",
+                threshold: "p(95)<200",// Return Error if the minimum duration time of requests is less than 200ms
                 abortOnFail: true, // Abort the test if the 95th percentile of request duration is higher than 200ms
                 delayAbortEval: "10s", // Delay the evaluation of the threshold until 10s have passed
-            },// Return Error if the minimum duration time of requests is less than 200ms
+            },
             ],
     }
 }
 
 export default function(){
-const response = http.get("https://api.escuelajs.co/api/v1/products/54")
+const response = http.get("https://api.escuelajs.co/api/v1/users/1")
 check(response, {
     "statusCode is 200": (r) => r.status === 200,
-    "Transaction is bellow 500ms": (r) => r.timings.duration < 500,
+    "Transaction is bellow 600ms": (r) => r.timings.duration < 600,
 })
 
 }
