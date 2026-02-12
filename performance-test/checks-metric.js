@@ -22,7 +22,7 @@ export const options = {
 }
 
 export default function(){
-const response = http.get("https://api.escuelajs.co/api/v1/products/11")
+const response = http.get("https://api.escuelajs.co/api/v1/products/54")
 check(response, {
     "statusCode is 200": (r) => r.status === 200,
     "Transaction is bellow 500ms": (r) => r.timings.duration < 500,
