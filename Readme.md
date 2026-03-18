@@ -1,3 +1,4 @@
+[![k6 - checks-metric](https://github.com/David101111101/performance-testing-k6/actions/workflows/k6-checks-metric.yml/badge.svg)](https://github.com/David101111101/performance-testing-k6/actions/workflows/k6-checks-metric.yml)
 # K6 Performance Testing Suite
 
 ## Overview
